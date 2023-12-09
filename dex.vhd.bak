@@ -1,0 +1,25 @@
+library std;
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity dex is
+	port (
+		di : in std_logic_vector(8 downto 0);
+		do : out std_logic_vector(15 downto 0)
+	) ;
+end entity;
+
+architecture comb of dex is
+
+begin
+
+do(15 downto 7) <= di(8 downto 0);
+do(6) <= "0";
+do(5) <= "0";
+do(4) <= "0";
+do(3) <= "0";
+do(2) <= "0";
+do(1) <= "0";
+do(0) <= "0";
+
+end comb;

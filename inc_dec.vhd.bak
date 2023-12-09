@@ -1,0 +1,17 @@
+library std;
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity inc_dec is
+	port(
+		data_in : in std_logic_vector(15 downto 0);
+		inc : out std_logic_vector(15 downto 0);
+		dec : out std_logic_vector(15 downto 0)
+	);
+end entity;
+
+architecture comb of inc_dec is
+begin
+	inc <= std_logic_vector(unsigned(data_in) + 1);
+	dec <= std_logic_vector(unsigned(data_in) - 1);
+end architecture;
